@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="../static/result.css">
+</head>
+<body>
+    <div class="result-con">
+        <div>
+            <img src="../static/5899209.jpg" width="500px" >
+        </div>
+        <div class="container">
+            <h1>Prediction Result</h1>
+            <p><strong>Store:</strong> {{ store }}</p>
+            <p><strong>Department:</strong> {{ dept }}</p>
+            <p><strong>Month:</strong> {{ month_name }}</p>
+            <p><strong>Year:</strong> {{ year }}</p>
+            <p><strong>Predicted Sales:</strong> ${{ output }}</p>
+            <a href="{{url_for('predict_form')}}">Make Another Prediction</a>
+            <a href="{{ url_for('home') }}">Home</a>
+        </div>
+    </div>
+</body>
+</html>

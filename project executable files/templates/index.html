@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Sales Prediction</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body style="display : flex;
+        flex-direction: column;">
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('predict_form') }}">Predict</a>
+        
+    </nav>
+    <div class="container">
+        <h1>Walmart Sales Prediction</h1>
+        <form method="POST" action="{{ url_for('predict') }}">
+            <div class="form-grid">
+                <div>
+                    <label for="store"><b>STORE:</b></label>
+                    <input type="number" id="store" placeholder="store" name="store" required>
+                </div>
+                <div>
+                    <label for="dept"><b>DEPT:</b></label>
+                    <input type="number" id="dept" placeholder="dept" name="dept" required>
+                </div>
+                <div>
+                    <label for="size"><b>SIZE:</b></label>
+                    <input type="number" id="size" placeholder="size" name="size" required>
+                </div>
+                <div>
+                    <label for="temp"><b>TEMPERATURE:</b></label>
+                    <input type="number" step="0.1" placeholder="temperature" id="temp" name="temp" required>
+                </div>
+                <div>
+                    <label for="isHoliday"><b>IS HOLIDAY [yes(1) or no(0)]:</b></label>
+                    <input type="number" id="isHoliday" placeholder="1 / 0" name="isHoliday" required>
+                </div>
+                <div>
+                    <label for="unemployment"><b>UNEMPLOYMENT:</b></label>
+                    <input type="number" step="0.1" id="unemployment" placeholder="unemployment" name="unemployment" required>
+                </div>
+                <div>
+                    <label for="is_weekend"><b>IS WEEKEND [yes(1) or no(0)]:</b></label>
+                    <input type="number" id="is_weekend" name="is_weekend" placeholder="1 / 0" required>
+                </div>
+                <div>
+                    <label for="cpi"><b>CPI:</b></label>
+                    <input type="number" step="0.1" id="cpi" name="cpi" placeholder="cpi" required>
+                </div>
+                <div>
+                    <label for="type_b"><b>TYPE B [yes(1) or no(0)]:</b></label>
+                    <input type="number" id="type_b" name="type_b" placeholder="1 / 0" required>
+                </div>
+                <div>
+                    <label for="type_c"><b>TYPE C [yes(1) or no(0)]:</b></label>
+                    <input type="number" id="type_c" name="type_c" placeholder="1 / 0" required>
+                </div>
+                <div>
+                    <label for="month"><b>M0NTH:</b></label>
+                    <input type="number" id="month" name="month" placeholder="month" required>
+                </div>
+                <div>
+                    <label for="year"><b>YEAR:</b></label>
+                    <input type="number" id="year" name="year" placeholder="year" required>
+                </div>
+            </div>
+            <div class="full-width">
+                <button class="btn" type="submit">PREDICT</button>
+            </div>
+        </form>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

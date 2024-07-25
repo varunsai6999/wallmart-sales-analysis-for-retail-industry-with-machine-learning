@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Sales Analysis</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('predict_form') }}">Predict</a>
+        
+    </nav>
+    <div class="home-con">
+        <div>
+            WALMART SALES ANALYSIS
+            <a class="button" href="{{ url_for('predict_form') }}">Get Started</a>
+        </div>
+        <div>
+            <img src="../static/Marketing consulting-rafiki.svg" alt="img" width="600px">
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Walmart Sales Analysis</h1>
+            <p>Welcome to the Walmart Sales Analysis project! This tool is designed to help you predict future sales based on various factors such as store number, department number, size, temperature, CPI, unemployment rate, holiday status, weekend status, and more.</p>
+            <p>By leveraging a trained Random Forest model, this application provides accurate sales predictions that can help in making informed business decisions. Simply fill out the required fields in the prediction form and get instant sales forecasts.</p>
+            <p>This project is part of an effort to utilize data science and machine learning techniques to enhance retail operations and provide actionable insights.</p>
+        </div>
+    </div>
+</body>
+</html>
+
